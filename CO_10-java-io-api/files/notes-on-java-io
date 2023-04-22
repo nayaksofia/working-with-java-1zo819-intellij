@@ -46,3 +46,11 @@ Several traps to avoid ::
 - A File is not linked to File System.
 - A Path is created from a File System.
 - A Path with a root may not be absolute.
+
+Reader Key Points::
+--------------------------
+- a reader must be closed
+- exceptions will be thrown
+- it can read character
+- it may support marking
+- chars can be skipped
