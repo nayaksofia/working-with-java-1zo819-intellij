@@ -21,7 +21,7 @@ public class ReaderClose {
 
             }
             System.out.println("sb = \n" + sb);
-            // reader.close(); :: Not required to use close method here
+            // reader.close(); :: Not required to use close method here,because inside try method we instantiate reader
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -54,3 +54,9 @@ Reader Key Points::
 - it can read character
 - it may support marking
 - chars can be skipped
+
+Writer Key Points ::
+---------------------
+- A writer must be closed
+- It can be flushed
+- It write characters
