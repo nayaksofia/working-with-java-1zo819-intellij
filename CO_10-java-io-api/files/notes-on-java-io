@@ -1,0 +1,48 @@
+File Object::
+--------------
+> A file object is independent of the file system. It can be used to access it.
+
+Several Key Points For File ::
+---------------
+- Create and Delete Files
+- Create Directories
+- Analyze the path
+- Get the real path to a file or directory
+- With files you can copy and move files
+
+Why another model for  a path ?
+------------------------------------------
+-  the File class is here to stay
+-  a File does not know the file system.
+-  no access to specific features
+
+Solution:: One interface with specific implementation
+Give access to specific features of the file system.
+This is why path interface is created.
+
+There are two APIs:
+----------------------
+> File Class: File is a class from Java I/O
+> Path Interface: Path is an Interface from Java NIO2
+
+Several key points for a Path:
+---------------------------------
+- parent : everything before the last /
+- root : may not exist, file system dependent
+- absolute path : identified by the file system
+
+- A file with a root may not be an absolute path.
+
+Path :: Four methods to keep in mind
+-------------------------------------
+- resolve()
+- resolveSibling()
+- relativize()
+- normalize()
+
+Several traps to avoid ::
+-----------------------------
+- A File is a class, A  Path is an Interface.
+- A File is not linked to File System.
+- A Path is created from a File System.
+- A Path with a root may not be absolute.

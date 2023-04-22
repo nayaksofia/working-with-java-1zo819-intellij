@@ -1,0 +1,37 @@
+Git Vs. GitHub::
+-----------------------------
+Explanation With Example ::
+Think of Git as a Single computer and GitHub as a network of multiple interconnected computers, all
+with the same end goal but a widely different role for how to get there.
+
+To push an existing repository from a command line :
+--------------------------
+Create a new repository in GitHub. Then write the following command.
+Eg:
+git remote add origin https://github.com/nayaksofia/working-with-java-1z0819-april2023.git
+git branch -M main
+git push -u origin main
+
+
+git pull ::
+-----------
+Git Pull is a command used to update the local version of a repository from a remote repository.
+It is a mixture of two other commands:
+git fetch
+git merge
+
+The [ git fetch ] command does not force to merge the changes into the repository while the
+[git pull] command not only download the remote content but also merges it into the current working copy.
+
+> Command :: git pull origin main
+             git pull <remote> <branch>
+
+After that you can push your changes to the remote repository:
+
+> Command :: git push origin main
+
+References:
+> Git Commands :
+   1. git pull :: https://www.w3docs.com/learn-git/git-pull.html
+   2. https://git-scm.com/
+   3. https://www.golinuxcloud.com/git-remote-add-examples/#:~:text=How%20git%20remote%20add%20works%3F%201%20Create%20a,remote%20repository%20as%20the%20origin.%20...%20More%20items
