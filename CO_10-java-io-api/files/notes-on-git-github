@@ -26,6 +26,11 @@ The [ git fetch ] command does not force to merge the changes into the repositor
 > Command :: git pull origin main
              git pull <remote> <branch>
 
+ If you are sure that the repositories are related, then you can try running the following command before the pull command:
+
+ > git pull origin main --allow-unrelated-histories
+
+
 After that you can push your changes to the remote repository:
 
 > Command :: git push origin main
