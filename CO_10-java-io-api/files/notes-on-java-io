@@ -60,3 +60,16 @@ Writer Key Points ::
 - A writer must be closed
 - It can be flushed
 - It write characters
+
+Buffering Key Points:
+---------------
+> BufferedReader extend the Abstract Reader Class .[Extend and compose ==> Decorator Pattern]
+
+> Java I/O is built on the Decorator Pattern.
+
+- BufferedReader is decorator of Reader
+- read and write lines
+- writer support charset
+- writer supports standard options
+-
+
