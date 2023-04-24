@@ -71,5 +71,37 @@ Buffering Key Points:
 - read and write lines
 - writer support charset
 - writer supports standard options
--
 
+OutputStream Key Points:
+---------------------------
+
+- It must be closed.
+- It can be flushed.
+- It can write bytes.
+
+InputStream Key Points:
+-------------------------------
+- It must be closed.
+- Exceptions may be thrown
+- It can read bytes
+- It may support marking
+- bytes can be skipped
+
+
+> An InputStreamReader is a Reader that is built on an InputStream .
+
+> An OutputStreamWriter is a Writer that is built on an OutputStream.
+
+Serialization key points:
+
+-  The process of taking an object from the memory and writing it on the stream of bytes is called
+ serialization and the inverse process is called de-serialization.
+
+- Only Serializable Objects can be serialized .
+
+- Are methods there in this Serializable interface ?
+ Ans . No . There are no methods in Serializable Interface.
+
+- If your class implements serializable it can define a serialVersionUID.
+
+- de-serializing an object may lead to partially reconstructed objects.
