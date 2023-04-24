@@ -1,13 +1,17 @@
 package com.inputoutput.stream.model;
 
 
+import java.io.Serial;
 import java.io.Serializable;
 
 //User :: POJO Class implements Serializable Interface which has no methods
 public class User implements Serializable {
 
+    @Serial
+    private static final long serialVersionUID = 6238607686640066689L;
+
     //Step -1 : Declare field
-    private String name;
+    private String firstName;
     private int age;
 
     //Step-2 : Generate non-parameterized constructor
@@ -18,18 +22,18 @@ public class User implements Serializable {
     //Step-3 : Generate Parameterized Constructor
 
     public User(String name, int age) {
-        this.name = name;
+        this.firstName = name;
         this.age = age;
     }
 
     //Step-4 : Generate getter and setter
 
     public String getName() {
-        return name;
+        return firstName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.firstName = name;
     }
 
     public int getAge() {
@@ -45,7 +49,7 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "firstName='" + firstName + '\'' +
                 ", age=" + age +
                 '}';
     }
