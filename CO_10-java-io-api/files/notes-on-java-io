@@ -105,3 +105,29 @@ Serialization key points:
 - If your class implements serializable it can define a serialVersionUID.
 
 - de-serializing an object may lead to partially reconstructed objects.
+
+Getting and Using Console Object :
+------------------------------------
+
+Console object key points:
+-----------------------------
+- the method printf() calls format()
+- the console object is a singleton
+- calling writer() or reader() returns a unique Writer or Reader
+-calling close() on this writer has no effect.
+
+Scanner key points::
+-------------------------
+- a Scanner works with tokens and find()
+- it provides an Iterator or a Stream
+- it relies on regular expressions
+- It does I/O buffering automatically
+
+> A Console may not exist.
+
+Reference ::
+-------------------------
+@JosePaumard----> Twitter
+JPaumard ---> Youtube
+JosePaumard---> GitHub
+BOOK For 1zo819: OCP Complete Study Guide [Oracle Certified Professional Java SE11 Developer]
