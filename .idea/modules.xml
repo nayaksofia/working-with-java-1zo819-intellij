@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CO_10-java-io-api/CO_10-java-io-api.iml" filepath="$PROJECT_DIR$/CO_10-java-io-api/CO_10-java-io-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CO_11-database-application/CO_11-database-application.iml" filepath="$PROJECT_DIR$/CO_11-database-application/CO_11-database-application.iml" />
       <module fileurl="file://$PROJECT_DIR$/CO_4-stream-lambda-expressions/CO_4-stream-lambda-expressions.iml" filepath="$PROJECT_DIR$/CO_4-stream-lambda-expressions/CO_4-stream-lambda-expressions.iml" />
       <module fileurl="file://$PROJECT_DIR$/CO_8-arrays-collections/CO_8-arrays-collections.iml" filepath="$PROJECT_DIR$/CO_8-arrays-collections/CO_8-arrays-collections.iml" />
     </modules>
