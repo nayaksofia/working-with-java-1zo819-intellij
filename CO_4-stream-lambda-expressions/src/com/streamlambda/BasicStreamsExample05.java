@@ -16,7 +16,7 @@ public class BasicStreamsExample05 {
 
         String categories = products.stream()
                 .map(Product::getCategory)
-                .distinct()
+                .distinct()                              //to remove the duplicate
                 .map(Category::name)
                 .collect(Collectors.joining(";"));
         System.out.println(categories);

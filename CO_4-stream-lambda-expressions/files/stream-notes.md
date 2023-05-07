@@ -110,8 +110,166 @@ Not short-circuiting:
 ---
 >allMatch() and noneMatch() are not short-circuiting. 
 
+Summary:-
+--
+> Stream Concepts
+ - Stream pipeline
+ - Intermediate and Terminal Operations
 
-Reducing and Collecting Streams:
----
+> Difference between `streams` and `collections`
 
-# Working with Streams in Depth 
+ - Imperative vs functional programming
+ - External vs internal iteration
+> Working with streams
+ - map and flatMap
+ - Searching in streams
+ - Collecting streams
+
+
+
+# MO-4 : Working with Streams in Depth 
+
+1. Generating and Building Streams:
+2. Reducing Streams in Details
+3. Collecting Streams in Detail
+
+  
+
+Collecting Streams:
+--
+> Collection = Mutable reduction
+
+> A collection operation reduces a stream into a mutable result container.
+
+Collection and Reduction
+--
+
+````
+<R> R collect(Supplier<R> supplier, BiConsumer <R, ? super T> accumulator, biConsumer<R,R> combiner)
+
+//Collection is for Mutable reduction
+````
+
+````
+<U> U reduce(U identity, BiFunction<U, ? super T, U> accumulator, BinaryOperator<U> combiner) 
+
+//Reduction is for Immutable Reduction 
+````
+
+Working with Collectors
+--
+
+Stream ---> Accumulator,
+            Supplier,
+            Combiner,
+            Finisher ----> Result
+
+
+<R, A> R collect(Collector<? super T, A, R> collector)
+
+>Collectors contains factory methods:
+
+ - toList()
+ - toSet()
+ - toMap()
+ - ........
+
+
+Grouping Stream Elements
+--
+
+Partitioning Stream Elements
+--
+
+Parallel Streams:
+--
+To get a Parallel Stream instead of calling `stream()` in a collection , you do call `parallelStream()` 
+
+
+````
+//Sequential Stream
+List<String> names = products.stream()
+          .filter(product->product.getCategory() == Category.FOOD)
+          .map(Product::getName) //Method Reference
+          .collect(Collectors.toList());
+
+
+//Parallel Stream
+List<String> names = products.parallelStream()
+          .filter(product->product.getCategory() == Category.FOOD)
+          .map(Product::getName) //Method Reference
+          .collect(Collectors.toList());
+          
+//External Iteration
+
+for(int i=0; i < products.size() ; i++) {
+
+   Product p = products.get(i);
+   System.out.println(product);
+   
+}
+
+//Internal Iteration
+products.parallelStream()
+        .forEach(System.out::println);
+
+
+//Grouping-By in Streams
+Map<Category, List<Product>> productsByCategory = 
+     products.stream().collect(
+     Collectors.groupingBy(Product::getCategory));
+     
+
+//Grouping-By in Parallel Streams :: Unorder collector
+Map<Category, List<Product>> productsByCategory = 
+     products.parallelStream().collect(
+     Collectors.groupingByConcurrent(Product::getCategory));
+ 
+````
+
+Specialized Streams
+--
+
+> IntStream
+
+> LongStream
+
+> DoubleStream
+
+Summary:
+--
+> Working with Lambda Expressions
+- A lambda expression is an anonymous method.
+- A lambda expression implements functional interface
+- A functional interface has a single abstract method.
+
+> Method References
+ - Use a method reference `instead of a lambda expression`.
+ - A method reference implements a `functional interface`.
+ - Refers to a `static` or `non-static method` or a `constructor`.
+
+Functional Interface
+````
+@FunctionalInterface
+interface ProductFilter{
+   boolean test(Product product);
+}
+````
+----
+> Lambda Expression
+
+> Functional Intrface 
+
+> Method Reference
+
+> Streams
+
+> Stream Operations
+
+> Reduction and Collection
+
+> Collectors
+
+> Grouping and Partitioning
+
+> Parallel Streams
