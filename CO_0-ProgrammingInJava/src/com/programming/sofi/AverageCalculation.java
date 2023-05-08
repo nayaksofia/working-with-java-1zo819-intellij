@@ -20,7 +20,7 @@ public class AverageCalculation {
         try(Scanner scanner = new Scanner(System.in)){
             int n;
             System.out.println("Enter the size of the array :: ");
-            n = scanner.nextInt(); //To Read from the user
+            n = scanner.nextInt(); //To Read Integer Value from the user
 
             int[] numbers = new int[n]; //Initialise Numbers
             int sum = 0;
